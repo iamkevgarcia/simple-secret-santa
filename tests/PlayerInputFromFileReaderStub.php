@@ -17,4 +17,34 @@ final class PlayerInputFromFileReaderStub
 
 		return new PlayerInputFromFileReader($file->url());
 	}
+
+	public static function withNoPlayers()
+	{
+		$root = vfsStream::setup();
+		$file = vfsStream::newFile('test.txt', 0755)
+			->withContent('')
+			->at($root);
+
+		return new PlayerInputFromFileReader($file->url());
+	}
+
+	public static function oddPlayers()
+	{
+		$root = vfsStream::setup();
+		$file = vfsStream::newFile('test.txt', 0755)
+			->withContent('PlayerInput' . PHP_EOL . 'Test' . PHP_EOL . 'Double')
+			->at($root);
+
+		return new PlayerInputFromFileReader($file->url());
+	}
+
+	public static function evenPlayers()
+	{
+		$root = vfsStream::setup();
+		$file = vfsStream::newFile('test.txt', 0755)
+			->withContent('PlayerInput' . PHP_EOL . 'Test' . PHP_EOL . 'Double' . PHP_EOL . 'BTS')
+			->at($root);
+
+		return new PlayerInputFromFileReader($file->url());
+	}
 }
