@@ -57,3 +57,4 @@ class PlayerInputFromFileReaderShould extends TestCase
 		$this->assertCount(3, $players);
 	}
 }
+
