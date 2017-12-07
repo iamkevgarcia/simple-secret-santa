@@ -7,7 +7,7 @@
         beStrictAboutChangesToGlobalState="true">
     <testsuites>
         <testsuite name="SecretSantaGame">
-            <directory>tests</directory>
+            <directory suffix="Should.php">tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
