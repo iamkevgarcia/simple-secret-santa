@@ -14,4 +14,4 @@ services:
       - php
     links:
       - php
-    command: bash -c "composer update && composer install" exit
+    command: bash -c "composer update && composer install"
