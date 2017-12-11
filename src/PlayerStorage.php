@@ -7,8 +7,8 @@ use SplObjectStorage;
 
 final class PlayerStorage extends SPLObjectStorage
 {
-	public function getHash($obj)
-	{
-		return strtolower($obj->name());
-	}
+    public function getHash($obj)
+    {
+        return strtolower($obj->name());
+    }
 }
