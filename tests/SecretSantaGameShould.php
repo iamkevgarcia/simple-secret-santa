@@ -14,18 +14,18 @@ use SecretSanta\SecretSantaGame;
 
 class SecretSantaGameShould extends TestCase
 {
-    /**
-     * @test
+	/**
+	 * @test
 	 * @expectedException SecretSanta\Exception\NoPlayersFoundException
 	 */
-    public function throw_an_exception_after_passing_no_player_names(): void
-    {
-    	$repeatedNames = PlayerInputFromFileReaderStub::withNoPlayers();
+	public function throw_an_exception_after_passing_no_player_names(): void
+	{
+		$repeatedNames = PlayerInputFromFileReaderStub::withNoPlayers();
 		$output = $this->createMock(Output::class);
 		$random = $this->createMock(Random::class);
 
 		new SecretSantaGame($repeatedNames, $output, $random);
-    }
+	}
 
 	/**
 	 * @test

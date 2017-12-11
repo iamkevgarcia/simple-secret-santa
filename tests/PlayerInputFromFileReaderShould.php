@@ -19,14 +19,14 @@ class PlayerInputFromFileReaderShould extends TestCase
 	}
 
 
-    /**
-     * @test
+	/**
+	 * @test
 	 * @expectedException SecretSanta\Exception\FileDoesNotExistException
-     */
-    public function throw_a_file_does_not_exists_exception_after_passing_non_existent_file(): void
-    {
-    	new PlayerInputFromFileReader('');
-    }
+	 */
+	public function throw_a_file_does_not_exists_exception_after_passing_non_existent_file(): void
+	{
+		new PlayerInputFromFileReader('');
+	}
 
 	/**
 	 * @test

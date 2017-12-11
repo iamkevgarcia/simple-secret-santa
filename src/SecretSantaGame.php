@@ -116,7 +116,7 @@ final class SecretSantaGame implements Game
 	private function getRandomReceiverPosition(array $assignments, array $giftReceivers, string $giftGiver): int
 	{
 		$random = $this->random->generate(0, count($giftReceivers) - 1);
-		while (	$giftGiver === $giftReceivers[$random]->name() &&
+		while ($giftGiver === $giftReceivers[$random]->name() &&
 			!$this->playerIsAlreadyAReceiver($assignments, $giftReceivers[$random])
 		) {
 			$random = $this->random->generate(0, count($giftReceivers) - 1);

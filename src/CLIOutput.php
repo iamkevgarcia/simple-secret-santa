@@ -9,8 +9,8 @@ use SecretSanta\Contracts\Output;
 
 final class CLIOutput implements Output
 {
-    public function printLine(string $line): void
-    {
-        echo $line . PHP_EOL;
-    }
+	public function printLine(string $line): void
+	{
+		echo $line . PHP_EOL;
+	}
 }
